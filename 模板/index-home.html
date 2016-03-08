@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>度娘模版的首页面</title>
+    <link rel='stylesheet prefetch' href='http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='style.css'>
+</head>
+<body>
+<div style="margin-top:100px;margin-bottom:25px" class="hidden-xs text-center"><img src="homelogo.png" alt="首页LOGO"></div>
+<div style="margin-top:10px">
+  <form class="col-sm-10 col-md-6 col-md-offset-3" >
+    <div class="input-group input-group-lg">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-folder-open text-muted"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">网页设计</a></li>
+          <li><a href="#">家具设计</a></li>
+          <li><a href="#">生活杂记</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">RSS订阅</a></li>
+        </ul>
+      </div>
+      <input type="text" class="form-control" placeholder="拍拍看科技...">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button">Go!</button>
+      </span>
+    </div>
+  </form>
+  <div style="padding-top:18px" class="col-sm-2 col-md-3 hidden-xs">
+    <a id="homepage" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown text-muted" style="padding-top:14px;margin-left:-18px">微信分享 <span class="caret"></span></a>
+    <div class="dropdown-menu weixin-box" aria-labelledby="homepage" style="margin-left:-90px">
+      <p class="text-center"><img src="http://api.qrserver.com/v1/create-qr-code/?size=128x128&amp;data=http://www.paipk.com" alt=""></p>
+      <p class="text-center">打开微信，点击底部的“发现”<br />使用“扫一扫”即可分享</p>
+    </div>
+  </div>
+</div><!-- 导航结束 -->
+<div class="col-sm-12 col-md-6 col-md-offset-3 home-page">
+  <!-- 内容 -->
+  <div class="tab-content">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#singleText" aria-controls="singleText" role="tab" data-toggle="tab">文章列表</a></li>
+      <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="singleText">
+        <div class="col-sm-8 more-margin">
+           <div>
+              <li class="pl-list"><span class="glyphicon glyphicon-list-alt text-muted"></span> <span class="text-muted hidden-xs">[2016-08-06] </span>在 <a href="http://bbs.html5cn.org/" target="_black" rel="nofollow">Html5中国</a> 论坛中找一篇热帖；</li>
+              <li class="pl-list"><span class="glyphicon glyphicon-list-alt text-muted"></span> <span class="text-muted hidden-xs">[2016-08-06] </span>去 <a href="http://news.hxsd.com/" target="_black" rel="nofollow">火星网</a> 和 <a href="http://www.viralnova.com/" target="_black" rel="nofollow">Viralnova</a> 看看有没有新鲜的资讯；</li>
+              <li class="pl-list"><span class="glyphicon glyphicon-list-alt text-muted"></span> <span class="text-muted hidden-xs">[2016-08-06] </span> 看看 <a href="http://bbs.zblogcn.com/index.php" target="_black" rel="nofollow">zblog社区</a> 有没有求助，能帮就回复下；</li>
+              <li class="pl-list"><span class="glyphicon glyphicon-list-alt text-muted"></span> <span class="text-muted hidden-xs">[2016-08-06] </span> <a href="#" target="_black" rel="nofollow" title="文章标题">用RSS来搂一下基友们的博客；</a></li>
+              <li class="pl-list"><span class="glyphicon glyphicon-list-alt text-muted"></span> <span class="text-muted hidden-xs">[2016-08-06] </span> 在不同时段发布几篇 <a href="http://weibo.com/paipk" target="_black" rel="nofollow">微博</a> 来增加人气；</li>
+              <br />
+              <p class="text-right"><a href="http://www.paipk.com/?page=2">更多内容 <span class="glyphicon glyphicon-comment"></span></a></p>
+            </div>
+        </div>
+        <div class="col-sm-4 more-margin list-right hidden-xs">这个地方留着做广告</div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="profile">...</div>
+      <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<p style="text-indent:200px;height: 100px" class="hidden-xs"></p>
+<!-- 底部 -->
+<footer>
+  <p class="text-center text-muted">Powered By <a href="http://www.zblogcn.com/" title="RainbowSoft Z-BlogPHP" target="_blank">Z-BlogPHP</a>.Theme by <a href="http://www.paipk.com" target="_black" title="拍拍看科技">Paipk.com</a>. 苏ICP备09094874号-2. <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5614424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D5614424' type='text/javascript'%3E%3C/script%3E"));</script>
+  </p>
+</footer>
+</body>
+    <script src='http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+</html>
