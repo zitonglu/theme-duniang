@@ -11,6 +11,8 @@
 .widget h5{font-weight: bold;color:rgb(79, 129, 189);padding-left:5px;border-left:5px solid rgb(79, 129, 189)}
 #divFavorites,#divLinkage{max-width:500px}
 #divMisc,#divTags{max-width:420px}
+#divTags li{border:1px solid rgb(231, 231, 231);margin:2px;padding:1px 4px}
+#divTags li span{font-size:9px;color:rgb(174, 174, 174)}
 #divArchives{max-width:220px}
 #divComments{max-width:420px}
 #divFavorites div,#divFavorites ul,#divLinkage div,#divLinkage ul,#divMisc div,#divMisc ul,#divTags div,#divTags ul{list-style:none;display:inline-block}
