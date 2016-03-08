@@ -37,7 +37,7 @@
 		</div>
 	</nav><!-- 顶部导航 End -->
 {if $zbp->Config('duniang')->ifHomeTopSearch=="1"}
-<div class="jumbotron hidden-xs">
+<div class="jumbotron hidden-xs JuMu">
 	<div class="text-center"><a href="{if $zbp->Config('duniang')->HomeTopUrl}{$zbp->Config('duniang')->HomeTopUrl}{else}{$host}{/if}"><img src="{$host}zb_users/theme/{$theme}/include/homelogo.png" alt="{$name}"></a></div>
 	<div style="margin-bottom:50px">
 		<form class="col-sm-10 col-md-6 col-md-offset-3" role="search" action="{$host}zb_system/cmd.php?act=search" name="search" method="post">
