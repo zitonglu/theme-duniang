@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme version="php">
+<id>duniang</id>
+<name>度娘</name>
+<url>http://www.paipk.com/</url>
+<note>度娘</note>
+<description>zblogPHP主题“度娘”模版.由蟹胖设计和制作.</description>
+<path>main.php</path>
+<include>include.php</include>
+<level>1</level>
+<author>
+  <name>蟹胖</name>
+  <email>paipk@paipk.com</email>
+  <url>http://www.paipk.com/</url>
+</author>
+<source>
+  <name>蟹胖</name>
+  <email>paipk@paipk.com</email>
+  <url>http://www.paipk.com/</url>
+</source>
+<adapted>140614</adapted>
+<version>1.5</version>
+<pubdate>2016-02-24</pubdate>
+<modified>2016-03-06</modified>
+<price>32</price>
+<advanced>
+  <dependency>sf_img1</dependency>
+  <rewritefunctions></rewritefunctions>
+  <conflict></conflict>
+</advanced>
+<sidebars>
+  <sidebar1></sidebar1>
+  <sidebar2></sidebar2>
+  <sidebar3></sidebar3>
+  <sidebar4></sidebar4>
+  <sidebar5></sidebar5>
+</sidebars>
+</theme>
