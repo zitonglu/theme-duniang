@@ -58,9 +58,35 @@ section.list-section>h4,.pl-list{overflow: hidden;text-overflow: ellipsis;white-
 	padding:6px 0;
 	text-align: center;
 }
-#divComments li{margin-bottom:15px}
+#divComments li{
+	border-bottom:1px dashed #e7e7e7;margin-bottom:20px;padding-bottom:15px
+}
 #divComments>ul{margin-left:-35px;margin-top:14px}
 #divComments>ul>li{list-style-type:none}
+.img-comment{
+	width:60px;
+	height:60px;
+	float:left;
+	margin-right: 10px;
+	border-radius: 20%;
+	border:1px solid #fff;
+	padding:2px;
+}
+.img-comment:hover{
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	border-radius:50%;
+	border:1px solid #e7e7e7;
+    transform: rotate(360deg) ;
+    -webkit-transform: rotate(360deg) ;
+    -moz-transform: rotate(360deg) ;
+    -o-transform: rotate(360deg) ;
+    -ms-transform: rotate(360deg) ;
+}
+
 /*文章列表*/
 .title-text,.blog-text{border-bottom:1px dashed #dadde3;margin-bottom:20px}
 .title-text h1{
