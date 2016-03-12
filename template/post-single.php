@@ -88,9 +88,12 @@
               {/php}
               {foreach $RMarray as $hotlist}
                 {php}SF_img1::getPics($hotlist,240,180,4);{/php}
+                {php}$src=SF_img1::getPicUrlBy($hotlist->Metas->duniang_teSeTuPian,240,180,4){/php}
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                {if $hotlist->sf_img_count>0}
+                {if $hotlist.Metas.duniang_teSeTuPian!=""}
+                  <img src="{$src}" alt="{$hotlist.Title}">
+                {elseif $hotlist->sf_img_count>0}
                   <img src="{$hotlist.sf_img[0]}" alt="{$hotlist.Title}">
                 {else}
                   <img src="{$host}zb_users/theme/{$theme}/include/nopic.jpg" alt="{$hotlist.Title}">

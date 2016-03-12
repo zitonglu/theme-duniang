@@ -6,6 +6,7 @@ function ActivePlugin_duniang()
 {
 	Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'duniang_AddMenu');
 	Add_Filter_Plugin('Filter_Plugin_Zbp_Load','duniang_rebuild_Main');
+	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','duniang_teSeTuPian');
 }
 
 //定义开头
@@ -120,6 +121,12 @@ function duniang_side_archives() {
 			if (restore) selObj.selectedIndex=0;}
 			</script>';
 	return $s;
+}
+
+//定义特色图片
+function duniang_teSeTuPian(){
+	global $zbp,$article;
+	echo '<div><label for="meta_duniang_teSeTuPian" class="editinputname">特色图片链接地址:</label><br /><input type="text" name="meta_duniang_teSeTuPian" value="'.htmlspecialchars($article->Metas->duniang_teSeTuPian).'"/><br /><img src="'.$article->Metas->duniang_teSeTuPian.'" alt="暂无图片" style="max-width:190px" /></div>';
 }
 
 function UninstallPlugin_duniang(){
