@@ -57,7 +57,7 @@ function duniang_side_comm() {
 	$comments = $zbp->GetCommentList('*', array(array('=', 'comm_RootID', 0)), array('comm_PostTime' => 'DESC'), $i, null);
 	$s = '';
 	foreach ($comments as $comment) {
-		$s .= '<li><a href="'.$comment->Post->Url.'"><img src="'.$comment->Author->Avatar.'" alt="头像" class="img-comment"></a>';
+		$s .= '<li><a href="'.$comment->Post->Url.'#cmt'.$comment->ID.'"><img src="'.$comment->Author->Avatar.'" alt="头像" class="img-comment"></a>';
 		$s .= '<span class="pl-list"><a href="'.$comment->Post->Url.'" title="'.$comment->Post->Title.'">'.$comment->Post->Title.'</a> <small>的评论：</small></span><br>';
 		$s .= '<a href="'.$comment->Post->Url.'" class="text-success">'.$comment->Author->StaticName.'</a>';
 		$s .= '<time class="text-muted"> - '.$comment->Time('Y-m-d').'</time><br>';
