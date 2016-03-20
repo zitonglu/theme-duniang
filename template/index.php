@@ -76,7 +76,7 @@
 				{template:post-multi}
 			{/foreach}
 			{if $zbp->Config('duniang')->listAD2!=""}
-			<section  class="col-sm-12 list-section hidden-xs">
+			<section  class="col-md-12 list-section hidden-xs hidden-sm">
 				{$zbp->Config('duniang')->listAD2}
 			</section>
 			{/if}<!-- PC广告 -->
