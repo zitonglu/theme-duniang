@@ -1,7 +1,7 @@
 .body-padding{padding-top:50px}
 .JuMu{border-bottom:1px solid #e7e7e7;}
 .list-section{margin-bottom:15px}
-.pl-list,section.list-section>h4{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+section.list-section>h4{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pl-list{margin-bottom:3px}
 #divPrevious a:visited,.list-section>h4>a:visited,.more-text a:visited,.pl-list a:visited{color:#563d7c}
 .weixin-box{padding:6px}
