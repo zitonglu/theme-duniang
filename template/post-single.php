@@ -99,7 +99,7 @@
                   <img src="{$host}zb_users/theme/{$theme}/include/nopic.jpg" alt="{$hotlist.Title}">
                 {/if}
                   <div class="caption">
-                    <p class="pl-list">
+                    <p class="pl-list more-list-p">
                       <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
                     </p>
                   </div>
