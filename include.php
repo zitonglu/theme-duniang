@@ -1,4 +1,5 @@
 <?php
+require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugin/search_config.php';
 //注册插件
 RegisterPlugin('duniang','ActivePlugin_duniang');
 
@@ -7,6 +8,7 @@ function ActivePlugin_duniang()
 	Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'duniang_AddMenu');
 	Add_Filter_Plugin('Filter_Plugin_Zbp_Load','duniang_rebuild_Main');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','duniang_teSeTuPian');
+	Add_Filter_Plugin('Filter_Plugin_Search_Begin','duniang_SearchMain');
 }
 
 //定义开头
