@@ -15,7 +15,7 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 #divTags li span{font-size:9px;color:rgb(174, 174, 174)}
 #divArchives{max-width:220px}
 #divFavorites div,#divFavorites ul,#divLinkage div,#divLinkage ul,#divMisc div,#divMisc ul,#divTags div,#divTags ul{list-style:none;display:inline-block}
-#divFavorites div li,#divFavorites ul li,#divLinkage div li,#divLinkage ul li,#divMisc div li,#divMisc ul li,#divTags div li,#divTags ul li{display:inline-block;padding-right:5px;padding-left:5px}
+ div.little-visible ul li,#divFavorites div li,#divFavorites ul li,#divLinkage div li,#divLinkage ul li,#divMisc div li,#divMisc ul li,#divTags div li,#divTags ul li{display:inline-block;padding-right:5px;padding-left:5px}
 #divMisc div li,#divMisc ul li{margin-top:3px;margin-bottom:3px}
 #divCalendar{max-width:300px}
 #divCalendar table{margin:0 auto}

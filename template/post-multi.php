@@ -15,7 +15,7 @@
 	<time class="text-muted">{$article.Time('Y年m月d日')}</time> - {$intro}<br>
 		{if $article->Alias!=""}<a href="{$article.Url}" class="text-danger" title="{$article.Title}">{$small_alias} <span class="caret"></span></a>
 		{elseif $article->Tags}
-		{foreach $article.Tags as $tag}<a href="{$tag.Url}" class="text-success">{$tag.Name}</a> {/foreach}
+		{foreach $article.Tags as $tag}<a href="{$tag.Url}" class="text-success">{$tag.Name}</a>&nbsp{/foreach}
 		{else}
 		<a href="{$article.Url}" title="{$article.Title}" class="text-success">{$small_url} <span class="caret"></span></a>
 		{/if}
