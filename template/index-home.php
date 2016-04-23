@@ -53,7 +53,7 @@
               {module:previous}
             </ul>
           {/if}
-					<p class="text-right"><a href="{$host}?page=2">更多内容 <span class="glyphicon glyphicon-comment"></span></a></p>
+					<p class="text-right"><a href="{$pagebar.nextbutton}">更多内容 <span class="glyphicon glyphicon-comment"></span></a></p>
 				</div>
 			</div>
 			{if $zbp->Config('duniang')->HomeAD1 && $article.Type==ZC_POST_TYPE_ARTICLE}
