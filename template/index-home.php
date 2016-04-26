@@ -48,12 +48,12 @@
 					{foreach $articles as $article}
 					<li class="pl-list"><span class="glyphicon glyphicon-list-alt text-muted"></span> <span class="text-muted hidden-xs">[{$article.Time('Y-m-d')}] </span> <a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></li>
 					{/foreach}
+          <p class="text-right"><a href="{$pagebar.nextbutton}">更多内容 <span class="glyphicon glyphicon-comment"></span></a></p>
           {else}
             <ul>
               {module:previous}
             </ul>
           {/if}
-					<p class="text-right"><a href="{$pagebar.nextbutton}">更多内容 <span class="glyphicon glyphicon-comment"></span></a></p>
 				</div>
 			</div>
 			{if $zbp->Config('duniang')->HomeAD1 && $article.Type==ZC_POST_TYPE_ARTICLE}
