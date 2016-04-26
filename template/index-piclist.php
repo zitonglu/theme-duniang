@@ -33,49 +33,20 @@
 			</div>
 		</div>
 	</nav><!-- 顶部导航 End -->
-<!-- {if $zbp->Config('duniang')->ifHomeTopSearch=="1"}
-<div class="jumbotron hidden-xs JuMu">
-	<div class="text-center"><a href="{if $zbp->Config('duniang')->HomeTopUrl}{$zbp->Config('duniang')->HomeTopUrl}{else}{$host}{/if}"><img src="{$host}zb_users/theme/{$theme}/include/homelogo.png" alt="{$name}"></a></div>
-	<div style="margin-bottom:50px">
-		<form class="col-sm-10 col-md-6 col-md-offset-3" role="search" action="{$host}zb_system/cmd.php?act=search" name="search" method="post">
-			<div class="input-group input-group-lg">
-				<div class="input-group-btn">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-folder-open text-muted"></span></button>
-					<ul class="dropdown-menu">
-						{module:catalog}
-						<li role="separator" class="divider"></li>
-						<li><a href="{$feedurl}" target="_black" title="{$title}的RSS订阅">RSS订阅</a></li>
-					</ul>
-				</div>
-				<input type="text" class="form-control" placeholder="{$name}..." name="q">
-				<span class="input-group-btn">
-					<button class="btn btn-primary" type="submit">Go!</button>
-				</span>
-			</div>
-		</form>
-		<div style="padding-top:18px" class="col-sm-2 col-md-3">
-			<a id="homepage" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown text-muted" style="padding-top:14px;margin-left:-18px">微信分享 <span class="caret"></span></a>
-			<div class="dropdown-menu weixin-box" aria-labelledby="homepage" style="margin-left:-90px">
-				<p class="text-center"><img src="http://api.qrserver.com/v1/create-qr-code/?size=128x128&amp;data={$host}" alt="{$name}"></p>
-				<p class="text-center" style="font-size:14px">打开微信，点击底部的“发现”<br />使用“扫一扫”即可分享</p>
-			</div>
-		</div>
-	</div>
-</div>
-{/if} -->
 	<div class="more-margin col-xs-12">
 		<div>
 			<ol class="breadcrumb">{module:catalog}</ol>
 		</div>
+		<div>
+			<ul class="list-inline PicList">
 		{foreach $articles as $article}
-			
+				{php}SF_img1::getPics($article,auto,180,4);{/php}
+				{for $i=0;$article->sf_img_count>$i;$i=$i+1}
+				<li><a href="{$article.Url}"><img src="{$article.sf_img[$i]}" alt="{$article.Title}" title="{$article.Title}"></a></li>
+				{/for}
 		{/foreach}
-		{if $zbp->Config('duniang')->listAD2!=""}
-		<section  class="col-md-12 list-section hidden-xs hidden-sm">
-			{$zbp->Config('duniang')->listAD2}
-		</section>
-		{/if}<!-- PC广告 -->
+			</ul>
+		</div>
 		{template:pagebar}
     </div>
 {template:footer}
-{/if}

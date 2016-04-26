@@ -45,3 +45,8 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 @media (max-width:767px) {
 .home-page{margin-top:10px;padding-left:15px;padding-right:15px}
 }
+/*4-26*/
+.list-inline > li{padding-left: 0 !important;padding-right: 0 !important;padding-top:4px;padding-bottom:4px}
+.PicList li img{height:180px;width: auto;}
+.PicList li img:hover{-webkit-animation:PicListMove .2s ease 2 alternate;-moz-animation:PicListMove .2s ease 2 alternate;-o-animation:PicListMove .2s ease 2 alternate;-ms-animation:PicListMove .2s ease 2 alternate;animation:PicListMove .2s ease 2 alternate;}
+@keyframes PicListMove{100%{transform: scale(1.1, 1.1);-webkit-transform: scale(1.1, 1.1);-moz-transform: scale(1.1, 1.1);-o-transform: scale(1.1, 1.1);-ms-transform: scale(1.1, 1.1);}}
