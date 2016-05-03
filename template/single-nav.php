@@ -4,7 +4,7 @@
 </div>';die();?>
 {template:header}
 </head>
-<body class="body-padding">
+<body class="body-padding single-nav">
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -33,15 +33,14 @@
 			</div>
 		</div>
 	</nav><!-- 顶部导航 End -->
-
-<div class="container more-margin">
-    <div class="col-sm-8">
-    {if $article.Type==ZC_POST_TYPE_ARTICLE}
-    {template:post-single}
-    {else}
-	{template:post-page}
-	{/if}
-    </div>
+<div class="jumbotron hidden-xs">
+  <div class="container">
+    <h1>{$name}导航条</h1>
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></div>
+</div>
+<div class="container single-nav-list">
+    {$article.Content}
 </div>
 {template:footer}
 
