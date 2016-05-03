@@ -132,7 +132,50 @@ section.list-section>h4,.pl-list{overflow: hidden;text-overflow: ellipsis;white-
 @media (max-width:767px) {
 .home-page{margin-top:10px;padding-left:15px;padding-right:15px}
 }
-/*4-26*/
+/*2016-5-3*/
+.single-nav{background:#eee;font-family: "微软雅黑","黑体";}
+.single-nav>.jumbotron{
+	color:#fff;
+	background:#4f9fcf;
+	margin-top:-10px;
+}
+.bdsharebuttonbox{float: right}
+.single-nav-list p{
+	float: left;
+	margin:5px;
+	display:block; 
+	width:200px;
+	height:100px;
+	background:#fff;
+	color:#767676;
+	font-size: 16px;
+	overflow: hidden;
+	border: 10px solid #fff;
+}
+.single-nav-list p a
+
+{
+	display:block; 
+	font-weight: 800;
+	font-size: 20px;
+	margin-bottom:5px;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+}
+.single-nav-list p a:hover{
+	color: #c7254e;
+	text-decoration: none;
+	-webkit-transition: all 0.3s;
+	  -moz-transition: all 0.3s;
+	  -ms-transition: all 0.3s;
+	  -o-transition: all 0.3s;
+	  transition: all 0.3s;
+}
+.single-nav>footer{margin-top:10px}
+@media (max-width:767px){
+	.single-nav-list p{width:100%}
+}/*4-26*/
 .list-inline > li{padding-left: 0 !important;padding-right: 0 !important;padding-top:4px;padding-bottom:4px}
 .PicList li img{height:180px;width: auto;}
 .PicList li img:hover{
