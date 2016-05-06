@@ -38,6 +38,7 @@ $zbp->Config('duniang')->ifseo = '1';
 $zbp->Config('duniang')->ifHomeSearch = '1';
 $zbp->Config('duniang')->ifsidebar1 = '0';
 $zbp->Config('duniang')->ifsidebar2 = '0';
+$zbp->Config('duniang')->ifListPic4 = '0';
 $zbp->Config('duniang')->HomeKeywords = '拍拍看科技';
 }
 $zbp->Config('duniang')->Version = '1.0';

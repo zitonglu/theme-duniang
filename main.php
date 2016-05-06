@@ -68,6 +68,7 @@ if(isset($_POST['ifseo'])){
   $zbp->Config('duniang')->baidutongji = $_POST['baidutongji'];
   $zbp->Config('duniang')->ifsidebar1 = $_POST['ifsidebar1'];
   $zbp->Config('duniang')->ifsidebar2 = $_POST['ifsidebar2'];
+  $zbp->Config('duniang')->ifListPic4 = $_POST['ifListPic4'];
   $zbp->SaveConfig('duniang');
     $zbp->ShowHint('good');
 }
@@ -96,6 +97,12 @@ if(isset($_POST['ifseo'])){
         <td><input name="HomeTopUrl" type="text" style="width:98%" value="<?php echo $zbp->Config('duniang')->HomeTopUrl; ?>">
           </input></td>
         <td>点击巨幕图片的链接，http://开头</td>
+      </tr>
+      <tr>
+        <td scope="row">文章列表4连图</td>
+        <td><input name="ifListPic4" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('duniang')->ifListPic4; ?>">
+      </input></td>
+      <td>开闭则不显示文章列表页面的4连图模式。</td>
       </tr>
       <tr>
         <td scope="row"><strong>网站SEO</strong></td>
