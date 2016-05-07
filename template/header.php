@@ -12,7 +12,7 @@
   <script src="{$host}zb_system/script/c_html_js_add.php" type="text/javascript"></script>
   <!--bootrap外调库-->
   <link rel="stylesheet" id="_bootstrap-css"  href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css" media="all" />
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/{$style}.css?v=1" type="text/css">
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/{$style}.css?v=1.1" type="text/css">
 	<meta name="generator" content="{$zblogphp}" />
 {$header}
   <!--首页相关信息-->
