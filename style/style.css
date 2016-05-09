@@ -52,7 +52,7 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 .single-nav-list p a:hover{color:#c7254e;text-decoration:none;-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s;transition:all .3s}
 .single-nav>footer{margin-top:10px}
 @media (max-width:767px){.single-nav-list p{width:100%}}
-=======
+
 @media (max-width:767px) {
 .home-page{margin-top:10px;padding-left:15px;padding-right:15px}
 }
