@@ -42,7 +42,6 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 .comment-list{margin-top:15px;padding-top:30px;padding-bottom:45px;border-top:1px dashed #dadde3}
 .media-left>a>img{max-width:60px;border-radius:50%}
 .home-page{margin-top:50px;padding-left:60px;padding-right:60px}
-
 @media (max-width:767px) {.home-page{margin-top:10px;padding-left:15px;padding-right:15px}}
 .single-nav{background:#eee;font-family:"微软雅黑","黑体"}
 .single-nav>.jumbotron{color:#fff;background:#4f9fcf;margin-top:-10px}
@@ -52,7 +51,6 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 .single-nav-list p a:hover{color:#c7254e;text-decoration:none;-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s;transition:all .3s}
 .single-nav>footer{margin-top:10px}
 @media (max-width:767px){.single-nav-list p{width:100%}}
-
 @media (max-width:767px) {
 .home-page{margin-top:10px;padding-left:15px;padding-right:15px}
 }
