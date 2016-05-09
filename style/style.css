@@ -45,7 +45,7 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 @media (max-width:767px) {.home-page{margin-top:10px;padding-left:15px;padding-right:15px}}
 .single-nav{background:#eee;font-family:"微软雅黑","黑体"}
 .single-nav>.jumbotron{color:#fff;background:#4f9fcf;margin-top:-10px}
-.bdsharebuttonbox{float:right}
+.single-nav .bdsharebuttonbox{float:right}
 .single-nav-list p{float:left;margin:5px;display:block;width:200px;height:100px;background:#fff;color:#767676;font-size:16px;overflow:hidden;border:10px solid #fff}
 .single-nav-list p a{display:block;font-weight:800;font-size:20px;margin-bottom:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .single-nav-list p a:hover{color:#c7254e;text-decoration:none;-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s;transition:all .3s}
