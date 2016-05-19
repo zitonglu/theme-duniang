@@ -30,9 +30,18 @@
 				<textarea name="txaArticle" id="txaArticle" rows="3" tabindex="5" class="form-control"></textarea>
 			</div>
 		</div>
+		{if $option['ZC_COMMENT_VERIFY_ENABLE']}
+		<div class="form-group">
+			<label for="inpVerify" class="col-sm-2 control-label">验证码(*)</label>
+			<div class="col-sm-10">
+				<input type="text" name="inpVerify" id="inpVerify" class="text" value="" size="28" tabindex="6" />
+				<img style="width:{$option['ZC_VERIFYCODE_WIDTH']}px;height:{$option['ZC_VERIFYCODE_HEIGHT']}px;cursor:pointer;" src="{$article.ValidCodeUrl}" alt="" title="" onclick="javascript:this.src='{$article.ValidCodeUrl}&amp;tm='+Math.random();"/>
+			</div>
+		</div>
+		{/if}
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-				<button type="submit" class="btn btn-default" name="sumbit" tabindex="6" onclick="return VerifyMessage()">发表评论</button>
+				<button type="submit" class="btn btn-default" name="sumbit" tabindex="7" onclick="return VerifyMessage()">发表评论</button>
 			</div>
 		</div>
 	</form>
