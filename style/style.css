@@ -1,6 +1,7 @@
 .body-padding{padding-top:50px}
 .JuMu{border-bottom:1px solid #e7e7e7;}
-.list-section{margin-bottom:15px}
+.list-section{margin-bottom:3px;padding-top:3px;padding-bottom:3px;}
+.list-section:hover{background-color: #f5f5f5;}
 section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pl-list{margin-bottom:3px}
 #divPrevious a:visited,.list-section>h4>a:visited,.more-text a:visited,.pl-list a:visited{color:#563d7c}
