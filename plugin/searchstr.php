@@ -6,7 +6,7 @@
  * @param int $cutlength 子串长度
  * @return string 
 */
-function NBlue_SubStrStartUTF8($sourcestr,$startstr,$cutlength) {
+function duniang_SubStrStartUTF8($sourcestr,$startstr,$cutlength) {
 	global $zbp;
 
 	if( function_exists('mb_substr') && function_exists('mb_internal_encoding') && function_exists('mb_stripos') ){

@@ -53,59 +53,47 @@
 <div class="more-name">相关文章</div>
 <aside>
   <ul class="more-text col-lg-10">
-        {$aid=$article.ID}
-        {$tagid=$article.Tags}
-        {$cid=$article.Category.ID}
-        {php}
-            $str = '';
-            $tagrd=array_rand($tagid);
-            if( sizeof($tagid)>0 && ($tagid[$tagrd]->Count)>1){
-                $tagi='%{'.$tagrd.'}%';
-                $where = array(array('=','log_Status','0'),array('like','log_Tag',$tagi),array('<>','log_ID',$aid));
-            }else{
-                $where = array(array('=','log_Status','0'),array('=','log_CateID',$cid),array('<>','log_ID',$aid));
-            }
-            $aboutarray = $zbp->GetArticleList(array('*'),$where,array('rand()'=>' '),array(6),'');
-            foreach ($aboutarray as $related) {
-                if(($related->ID)!=$aid){
-                $str .= "<li><time class=\"visible-lg\">".$related->time('Y-m-d H:i')."</time><i class=\"dian\"> ● </i><a href=\"{$related->Url}\" title=\"{$related->Title}\">{$related->Title}</a></li>";
-                }
-            }
-        {/php}
-        {$str}
+    {$arrayAbout=GetList(6,null,null,null,null,null,array('is_related'=>$article->ID));}
+    {foreach $arrayAbout as $related}
+    <li>
+      <time class="visible-lg">{$related.Time("Y-m-d H:i")}</time>
+      <i class="dian"></i>
+      <a href="{$related.Url}" title="{$related.Title}">{$related.Title}</a>
+    </li>
+    {/foreach}
   </ul>
   <div class="clearfix"></div>
 </aside><!-- 相关文章 -->
 <div class="more-name">热门文章</div>
 <aside class="row more-margin">
-              {php}
-              $stime = time();
-              $ytime = 91*24*60*60;
-              $ztime = $stime-$ytime;
-              $order = array('log_ViewNums'=>'DESC');
-              $where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-              $RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(6),'');
-              {/php}
-              {foreach $RMarray as $hotlist}
-                {php}SF_img1::getPics($hotlist,240,180,4);{/php}
-                {php}$src=SF_img1::getPicUrlBy($hotlist->Metas->duniang_teSeTuPian,240,180,4){/php}
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                {if $hotlist.Metas.duniang_teSeTuPian!=""}
-                  <img src="{$src}" alt="{$hotlist.Title}">
-                {elseif $hotlist->sf_img_count>0}
-                  <img src="{$hotlist.sf_img[0]}" alt="{$hotlist.Title}">
-                {else}
-                  <img src="{$host}zb_users/theme/{$theme}/include/nopic.jpg" alt="{$hotlist.Title}">
-                {/if}
-                  <div class="caption">
-                    <p class="pl-list more-list-p">
-                      <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/foreach}
+  {php}
+  $stime = time();
+  $ytime = 91*24*60*60;
+  $ztime = $stime-$ytime;
+  $order = array('log_ViewNums'=>'DESC');
+  $where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
+  $RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(6),'');
+  {/php}
+  {foreach $RMarray as $hotlist}
+  {php}SF_img1::getPics($hotlist,240,180,4);{/php}
+  {php}$src=SF_img1::getPicUrlBy($hotlist->Metas->duniang_teSeTuPian,240,180,4){/php}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      {if $hotlist.Metas.duniang_teSeTuPian!=""}
+      <img src="{$src}" alt="{$hotlist.Title}">
+      {elseif $hotlist->sf_img_count>0}
+      <img src="{$hotlist.sf_img[0]}" alt="{$hotlist.Title}">
+      {else}
+      <img src="{$host}zb_users/theme/{$theme}/include/nopic.jpg" alt="{$hotlist.Title}">
+      {/if}
+      <div class="caption">
+        <p class="pl-list more-list-p">
+          <a href="{$hotlist.Url}" title="{$hotlist.Title}">{$hotlist.Title}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  {/foreach}
 </aside><!-- 热门文章 -->
 {if $zbp->Config('duniang')->PageAD2!=""}
   <div class="hidden-sm hidden-xs center-block">

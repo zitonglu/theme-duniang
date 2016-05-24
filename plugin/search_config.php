@@ -52,7 +52,7 @@ $pagebar->PageBarCount=$zbp->pagebarcount;
 		null
 	);
     foreach($articles as $article){
-        $intro = preg_replace('/[\r\n\s]+/', '', trim(Sp2SubStrStartUTF8(TransferHTML($article->Content,'[nohtml]'),$q,170)) . '...');
+        $intro = preg_replace('/[\r\n\s]+/', '', trim(duniang_SubStrStartUTF8(TransferHTML($article->Content,'[nohtml]'),$q,170)) . '...');
         $article->Intro = str_ireplace($q,$qc,$intro);
         $article->Title = str_ireplace($q,$qc,$article->Title);
     }

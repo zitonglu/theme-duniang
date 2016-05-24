@@ -8,7 +8,6 @@
 				{else}.<a href="{$host}zb_system/cmd.php?act=login" rel="nofollow" title="登录管理">登录</a>{/if}</span>
             </p>
         </footer>
-    </body>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script> <!--调用的外部JS -->
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script><!-- 调用的外部JS -->
     <script>
@@ -23,4 +22,5 @@
     //@ sourceURL=pen.js
     </script>
     {$footer}
+    </body>
 </html>

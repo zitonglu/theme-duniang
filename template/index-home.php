@@ -40,43 +40,44 @@
       <li role="presentation"><a href="#links" aria-controls="links" role="tab" data-toggle="tab">友情链接</a></li>
     </ul>
     <!-- Tab panes -->
-	<div class="tab-content">
-		<div role="tabpanel" class="tab-pane active" id="singleText">
-			<div class="col-lg-9 more-margin">
-				<div>
-          {if $article.Type==ZC_POST_TYPE_ARTICLE}
-					{foreach $articles as $article}
-					<li class="pl-list"><span class="glyphicon glyphicon-list-alt text-muted"></span> <span class="text-muted hidden-xs">[{$article.Time('Y-m-d')}] </span> <a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></li>
-					{/foreach}
-          <p class="text-right"><a href="{$pagebar.nextbutton}">更多内容 <span class="glyphicon glyphicon-comment"></span></a></p>
-          {else}
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="singleText">
+        <div class="col-lg-9 more-margin">
+          <div>
+            {if $article.Type==ZC_POST_TYPE_ARTICLE}
+            {foreach $articles as $article}
+            <li class="pl-list"><span class="glyphicon glyphicon-list-alt text-muted"></span> <span class="text-muted hidden-xs">[{$article.Time('Y-m-d')}] </span> <a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></li>
+            {/foreach}
+            <p class="text-right"><a href="{$pagebar.nextbutton}">更多内容 <span class="glyphicon glyphicon-comment"></span></a></p>
+            {else}
             <ul>
               {module:previous}
             </ul>
-          {/if}
-				</div>
-			</div>
-			{if $zbp->Config('duniang')->HomeAD1 && $article.Type==ZC_POST_TYPE_ARTICLE}
-			<div class="col-lg-3 more-margin list-right visible-lg">
-				{$zbp->Config('duniang')->HomeAD1}
-			</div>
-			{/if}
-		</div>
-		<div role="tabpanel" class="tab-pane" id="links">
-      {if $modules['link'].Content}
-      <div class="list-inline">
-        <h3>友情链接</h3>
-        {module:link}
+            {/if}
+          </div>
+        </div>
+        {if $zbp->Config('duniang')->HomeAD1 && $article.Type==ZC_POST_TYPE_ARTICLE}
+        <div class="col-lg-3 more-margin list-right visible-lg">
+          {$zbp->Config('duniang')->HomeAD1}
+        </div>
+        {/if}
       </div>
-      {/if}
-      {if $modules['favorite'].Content}
-      <div class="list-inline">
-        <h3>网站收藏</h3>
-        {module:favorite}
+      <div role="tabpanel" class="tab-pane" id="links">
+        {if $modules['link'].Content}
+        <div class="list-inline">
+          <h3>友情链接</h3>
+          {module:link}
+        </div>
+        {/if}
+        {if $modules['favorite'].Content}
+        <div class="list-inline">
+          <h3>网站收藏</h3>
+          {module:favorite}
+        </div>
+        {/if}
       </div>
-      {/if}
     </div>
-	</div>
-<div class="clearfix"></div>
-<p style="text-indent:1px;height: 100px" class="hidden-xs"></p>
+    <div class="clearfix"></div>
+    <p style="text-indent:1px;height: 100px" class="hidden-xs"></p>
+</div>
 {template:footer}
