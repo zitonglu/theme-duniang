@@ -73,11 +73,11 @@ $pagebar->PageBarCount=$zbp->pagebarcount;
 	die();
 }
 
-function NBlue_begin(){
+function duniang_begin(){
 	ob_start();
 }
 
-function NBlue_end(){
+function duniang_end(){
 	$content = ob_get_contents();
 	ob_get_clean();
 	global $zbp;
