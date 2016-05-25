@@ -34,7 +34,7 @@
 	   - {$article.ViewNums}人次浏览
 	</span>
 	<p>
-		<ul class="list-inline col-lg-offset-1">
+		<ul class="list-inline">
 			<li><a href="{$article.Url}"><img src="{$article.sf_img[0]}" alt="{$article.Title}" class="img-responsive"></a></li>
 			<li><a href="{$article.Url}"><img src="{$article.sf_img[1]}" alt="{$article.Title}" class="img-responsive"></a></li>
 			<li><a href="{$article.Url}"><img src="{$article.sf_img[2]}" alt="{$article.Title}" class="img-responsive"></a></li>
