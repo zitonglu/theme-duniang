@@ -66,3 +66,4 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 .list-inline{margin-left:10px}
 .carousel-control {width: 40px;height: 80px;top: 50%;margin-top: -40px;}
 .nav-style{border-bottom:2px solid rgb(79, 159, 207);}
+.carousel-control.right,.carousel-control.left{background-image:none;}
