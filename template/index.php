@@ -8,7 +8,7 @@
 {template:header}
 </head>
 <body class="body-padding">
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top nav-style">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -36,7 +36,7 @@
 		</div>
 	</div>
 </nav><!-- 顶部导航 End -->
-	{if $zbp->Config('duniang')->ifHomeTopSearch=="1"}
+	{if $zbp->Config('duniang')->ifHomeTopSearch=="1"&&$page!='1'}
 	<div class="jumbotron hidden-xs JuMu">
 		<div class="text-center"><a href="{if $zbp->Config('duniang')->HomeTopUrl}{$zbp->Config('duniang')->HomeTopUrl}{else}{$host}{/if}"><img src="{$host}zb_users/theme/{$theme}/include/homelogo.png" alt="{$name}"></a></div>
 		<div style="margin-bottom:50px">
