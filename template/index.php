@@ -36,7 +36,7 @@
 		</div>
 	</div>
 </nav><!-- 顶部导航 End -->
-	{if $zbp->Config('duniang')->ifHomeTopSearch=="1"&&$page!='1'}
+	{if $zbp->Config('duniang')->ifHomeTopSearch=="1"}
 	<div class="jumbotron hidden-xs JuMu">
 		<div class="text-center"><a href="{if $zbp->Config('duniang')->HomeTopUrl}{$zbp->Config('duniang')->HomeTopUrl}{else}{$host}{/if}"><img src="{$host}zb_users/theme/{$theme}/include/homelogo.png" alt="{$name}"></a></div>
 		<div style="margin-bottom:50px">
@@ -135,7 +135,6 @@
 		{/if}
 <!-- 循环幻灯片 -->
 <!-- <div><ol class="breadcrumb">{module:catalog}</ol></div> -->
-			{$article_i=0}
 			{foreach $articles as $article}
 			{template:post-multi}
 			{/foreach}

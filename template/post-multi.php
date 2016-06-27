@@ -9,7 +9,7 @@
     SF_img1::getPics($article,120,75,4);
     $article_i++;
 {/php}
-{if $article->sf_img_count>=4 && $article_i >= 4 && $zbp->Config('duniang')->ifListPic4==false}
+{if $article->sf_img_count>=4 && $zbp->Config('duniang')->ifListPic4==false}
 <section class="col-xs-12 list-section" id="{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
 	<time class="text-muted">{$article.Time('Y年m月d日')}</time> - {$intro}<br>
@@ -42,7 +42,7 @@
 		</ul>
 	</p>
 </section>
-{elseif $article->sf_img_count>=1 and $article_i % 3 != 0}
+{elseif $article->sf_img_count>=1}
 <section class="col-xs-12 list-section" id="{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}"><span class="text-danger">{$article.Category.Name}</span>-{$article.Title}</a></h4>
 	<div class="col-sm-3 hidden-xs"><a href="{$article.Url}"><img src="{$article.sf_img[0]}" alt="{$article.Title}" class="img-responsive"></a></div>
