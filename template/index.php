@@ -52,12 +52,12 @@
 					</div>
 					<input type="text" class="form-control" placeholder="{$name}..." name="q">
 					<span class="input-group-btn">
-						<button class="btn btn-primary" type="submit">Go!</button>
+						<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search text-muted"></span></button>
 					</span>
 				</div>
 			</form>
 			<div style="padding-top:18px" class="col-sm-2 col-md-3">
-				<a id="homepage" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown text-muted" style="padding-top:14px;margin-left:-18px">微信分享 <span class="caret"></span></a>
+				<a id="homepage" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown JuMu-link" style="padding-top:14px;margin-left:-18px">微信分享 <span class="caret"></span></a>
 				<div class="dropdown-menu weixin-box" aria-labelledby="homepage" style="margin-left:-90px">
 					<p class="text-center"><img src="http://api.qrserver.com/v1/create-qr-code/?size=128x128&amp;data={$host}" alt="{$name}"></p>
 					<p class="text-center" style="font-size:14px">打开微信，点击底部的“发现”<br />使用“扫一扫”即可分享</p>
