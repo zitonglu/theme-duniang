@@ -69,6 +69,13 @@ if(isset($_POST['ifseo'])){
   $zbp->Config('duniang')->ifsidebar1 = $_POST['ifsidebar1'];
   $zbp->Config('duniang')->ifsidebar2 = $_POST['ifsidebar2'];
   $zbp->Config('duniang')->ifListPic4 = $_POST['ifListPic4'];
+  $zbp->Config('duniang')->ifcarousel = $_POST['ifcarousel'];
+  $zbp->Config('duniang')->carousel0 = $_POST['carousel0'];
+  $zbp->Config('duniang')->carousel1 = $_POST['carousel1'];
+  $zbp->Config('duniang')->carousel2 = $_POST['carousel2'];
+  $zbp->Config('duniang')->carousel3 = $_POST['carousel3'];
+  $zbp->Config('duniang')->carousel4 = $_POST['carousel4'];
+  $zbp->Config('duniang')->carousel5 = $_POST['carousel5'];
   $zbp->SaveConfig('duniang');
     $zbp->ShowHint('good');
 }
@@ -137,6 +144,48 @@ if(isset($_POST['ifseo'])){
         <td><input name="ifsidebar2" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('duniang')->ifsidebar2; ?>">
           </input></td>
         <td>开启内容页页侧栏自动跟随</td>
+      </tr>
+      <tr>
+        <td scope="row"><strong>首页幻灯片开关</strong></td>
+        <td><input name="ifcarousel" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('duniang')->ifcarousel; ?>">
+          </input></td>
+        <td>开启关闭首页幻灯片模式</td>
+      </tr>
+      <tr>
+        <td scope="row">幻灯片默认图片URL</td>
+        <td><input name="carousel0" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel0; ?>">
+          </input></td>
+        <td>http://格式</td>
+      </tr>
+      <tr>
+        <td scope="row">幻灯片第二图片URL</td>
+        <td><input name="carousel1" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel1; ?>">
+          </input></td>
+        <td>http://格式</td>
+      </tr>
+      <tr>
+        <td scope="row">幻灯片第三图片URL</td>
+        <td><input name="carousel2" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel2; ?>">
+          </input></td>
+        <td>http://格式</td>
+      </tr>
+      <tr>
+        <td scope="row">幻灯片第四图片URL</td>
+        <td><input name="carousel3" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel3; ?>">
+          </input></td>
+        <td>http://格式</td>
+      </tr>
+      <tr>
+        <td scope="row">幻灯片第五图片URL</td>
+        <td><input name="carousel4" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel4; ?>">
+          </input></td>
+        <td>http://格式</td>
+      </tr>
+      <tr>
+        <td scope="row">幻灯片第六图片URL</td>
+        <td><input name="carousel5" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel5; ?>">
+          </input></td>
+        <td>http://格式</td>
       </tr>
       </table>
       <br/>
