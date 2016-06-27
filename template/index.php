@@ -73,42 +73,52 @@
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    {if $zbp->Config('duniang')->carousel1!=""}
 		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    {/if}
+		    {if $zbp->Config('duniang')->carousel2!=""}
 		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		    {/if}
+		    {if $zbp->Config('duniang')->carousel3!=""}
 		    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		    {/if}
+		    {if $zbp->Config('duniang')->carousel4!=""}
 		    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+		    {/if}
+		    {if $zbp->Config('duniang')->carousel5!=""}
 		    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+			{/if}
 		  </ol>
 
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 		    <div class="item active">
-		      <img src="{$zbp->Config('duniang')->carousel0}" alt="...">
+		      {$zbp->Config('duniang')->carousel0}
 		    </div>
 		    {if $zbp->Config('duniang')->carousel1!=""}
 		    <div class="item">
-		      <img src="{$zbp->Config('duniang')->carousel1}" alt="...">
+		      {$zbp->Config('duniang')->carousel1}
 		    </div>
 		    {/if}
 		    {if $zbp->Config('duniang')->carousel2!=""}
 		    <div class="item">
-		      <img src="{$zbp->Config('duniang')->carousel2}" alt="...">
+		      {$zbp->Config('duniang')->carousel2}
 		    </div>
 		    {/if}
 		    {if $zbp->Config('duniang')->carousel3!=""}
 		    <div class="item">
-		      <img src="{$zbp->Config('duniang')->carousel3}" alt="...">
+		      {$zbp->Config('duniang')->carousel3}
 		    </div>
 		    {/if}
 		    {if $zbp->Config('duniang')->carousel4!=""}
 		    <div class="item">
-		      <img src="{$zbp->Config('duniang')->carousel4}" alt="...">
+		      {$zbp->Config('duniang')->carousel4}
 		    </div>
 		    {/if}
 		    {if $zbp->Config('duniang')->carousel5!=""}
 		    <div class="item">
-		      <img src="{$zbp->Config('duniang')->carousel5}" alt="...">
-		    </div>
+				{$zbp->Config('duniang')->carousel5}
+			</div>
 		    {/if}
 		  </div>
 

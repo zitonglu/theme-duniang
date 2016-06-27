@@ -153,39 +153,33 @@ if(isset($_POST['ifseo'])){
       </tr>
       <tr>
         <td scope="row">幻灯片默认图片URL</td>
-        <td><input name="carousel0" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel0; ?>">
-          </input></td>
-        <td>http://格式</td>
+        <td><textarea name="carousel0" type="text" style="width:98%" ><?php echo $zbp->Config('duniang')->carousel0; ?></textarea></td>
+        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
       </tr>
       <tr>
         <td scope="row">幻灯片第二图片URL</td>
-        <td><input name="carousel1" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel1; ?>">
-          </input></td>
-        <td>http://格式</td>
+        <td><textarea name="carousel1" type="text" style="width:98%" ><?php echo $zbp->Config('duniang')->carousel1; ?></textarea></td>
+        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
       </tr>
       <tr>
         <td scope="row">幻灯片第三图片URL</td>
-        <td><input name="carousel2" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel2; ?>">
-          </input></td>
-        <td>http://格式</td>
+        <td><textarea name="carousel2" type="text" style="width:98%" ><?php echo $zbp->Config('duniang')->carousel2; ?></textarea></td>
+        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
       </tr>
       <tr>
         <td scope="row">幻灯片第四图片URL</td>
-        <td><input name="carousel3" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel3; ?>">
-          </input></td>
-        <td>http://格式</td>
+        <td><textarea name="carousel3" type="text" style="width:98%" ><?php echo $zbp->Config('duniang')->carousel3; ?></textarea></td>
+        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
       </tr>
       <tr>
         <td scope="row">幻灯片第五图片URL</td>
-        <td><input name="carousel4" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel4; ?>">
-          </input></td>
-        <td>http://格式</td>
+        <td><textarea name="carousel4" type="text" style="width:98%" ><?php echo $zbp->Config('duniang')->carousel4; ?></textarea></td>
+        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
       </tr>
       <tr>
         <td scope="row">幻灯片第六图片URL</td>
-        <td><input name="carousel5" type="text" style="width:90%" value="<?php echo $zbp->Config('duniang')->carousel5; ?>">
-          </input></td>
-        <td>http://格式</td>
+        <td><textarea name="carousel5" type="text" style="width:98%" ><?php echo $zbp->Config('duniang')->carousel5; ?></textarea></td>
+        <td>请参考<a href="http://v3.bootcss.com/javascript/#carousel" target="_black">代码模板</a></td>
       </tr>
       </table>
       <br/>
