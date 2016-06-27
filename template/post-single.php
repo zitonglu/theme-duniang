@@ -72,7 +72,7 @@
   $ztime = $stime-$ytime;
   $order = array('log_ViewNums'=>'DESC');
   $where = array(array('=','log_Status','0'),array('>','log_PostTime',$ztime));
-  $RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(6),'');
+  $RMarray = $zbp->GetArticleList(array('*'),$where,$order,array(3),'');
   {/php}
   {foreach $RMarray as $hotlist}
   {php}SF_img1::getPics($hotlist,240,180,4);{/php}
