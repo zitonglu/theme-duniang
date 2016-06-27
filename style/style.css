@@ -64,3 +64,5 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 /*5-22*/
 .blog-text h1,.blog-text h2,.blog-text h3,.blog-text h4,.blog-text h5,.blog-text h6{font-size: 20px;font-weight: bold;color: rgb(79,129,189);padding-bottom: 6px;border-bottom: 1px solid rgb(79,129,189);}
 .list-inline{margin-left:10px}
+.carousel-control {width: 40px;height: 80px;top: 50%;margin-top: -40px;}
+.carousel-inner{border-radius:5px;}
