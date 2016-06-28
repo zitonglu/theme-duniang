@@ -17,25 +17,31 @@
       {if $article.Tags}
       标签：{foreach $article.Tags as $tag}<a href="{$tag.Url}">{$tag.Name}</a> {/foreach}
       {else}{$article.Author.StaticName}
-      {/if} 
-      <a href="#" data-toggle="modal" data-target="#myModal" class="hidden-xs" title="微信分享" alt="微信分享"> - <i class="glyphicon glyphicon-qrcode"></i> - </a>
+      {/if}
     </p>
   </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+<div class="blog-text">{$article.Content}
+  <div class="text-center" style="margin-top:20px;margin-bottom:20px">
+    <div class="btn-group" role="group">
+      <a href="#" data-toggle="modal" data-target="#shang" type="button" class="btn btn-default" title="打赏" alt="打赏"><i class="glyphicon glyphicon-thumbs-up"></i> 打赏</a>
+      <a href="#" data-toggle="modal" data-target="#myerweima" type="button" class="btn btn-default" title="微信分享" alt="微信分享"><i class="glyphicon glyphicon-qrcode"></i> 二维码</a>
+      <a href="#" data-toggle="modal" data-target="#shareOut" type="button" class="btn btn-default" title="文章分享" alt="文章分享"><i class="glyphicon glyphicon-share"></i> 分享</a>
+    </div>
+  </div>
+  <!-- 分享按钮 -->
+<!-- 跳出弹窗 -->
+<div class="modal fade" id="shang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">二维码扫描</h4>
+        <p class="modal-title" id="myModalLabel">谢谢您的支持</p>
       </div>
       <div class="modal-body text-center">
         <p>
-          <img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data={$article.Url}" alt="{$article.Title}">
-        </p>
-        <p>
-          打开微信，点击底部的“发现”，使用“扫一扫”即可将网页分享至朋友圈。
+          <img src="{$host}zb_users/theme/{$theme}/include/shang.jpg" alt="打赏图片">
         </p>
       </div>
       <div class="modal-footer">
@@ -44,7 +50,48 @@
     </div>
   </div>
 </div>
-<div class="blog-text">{$article.Content}</div>
+<!-- shang end -->
+<div class="modal fade" id="myerweima" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title" id="myModalLabel">二维码扫描</p>
+      </div>
+      <div class="modal-body text-center">
+        <p>
+          <img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data={$article.Url}" alt="{$article.Title}">
+        </p>
+        <p>
+          打开微信，点击底部的“发现”，<br />使用“扫一扫”即可将网页分享至朋友圈。
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- myerweima end -->
+<div class="modal fade" id="shareOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title" id="myModalLabel">文章分享</p>
+      </div>
+      <div class="modal-body text-center">
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- shareOut end -->
+
+</div>
 {if $zbp->Config('duniang')->PageAD1!=""}
   <div class="hidden-sm hidden-xs center-block">
     {$zbp->Config('duniang')->PageAD1}
