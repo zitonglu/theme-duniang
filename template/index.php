@@ -133,7 +133,7 @@
 		  </a>
 		</div>
 		{/if}
-<!-- 循环幻灯片 -->
+<!-- 循环幻灯片end -->
 <!-- <div><ol class="breadcrumb">{module:catalog}</ol></div> -->
 			{foreach $articles as $article}
 			{template:post-multi}

@@ -21,17 +21,7 @@
 		{/if}
 	<span class="text-muted"> - 
 	<span>
-	<a id="weixin-{$article.ID}" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown text-muted hidden-xs">微信分享 <span class="caret"></span></a>
-	<div class="dropdown-menu weixin-box" aria-labelledby="weixin-{$article.ID}">
-		<p>
-			<img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data={$article.Url}" alt="{$article.Title}">
-		</p>
-		<p>
-			打开微信，点击底部的“发现”，<br/>使用“扫一扫”即可将网页分享至朋友圈。
-		</p>
-	</div>
-	</span>
-	   - {$article.ViewNums}人次浏览
+	   {$article.CommNums}评论 - {$article.ViewNums}人次浏览
 	</span>
 	<p>
 		<ul class="list-inline">
@@ -59,10 +49,7 @@
 		<a id="weixin-{$article.ID}" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown text-muted hidden-xs">微信分享 <span class="caret"></span></a>
 		<div class="dropdown-menu weixin-box" aria-labelledby="weixin-{$article.ID}">
 			<p>
-				<img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data={$article.Url}" alt="{$article.Title}">
-			</p>
-			<p>
-				打开微信，点击底部的“发现”，<br/>使用“扫一扫”即可将网页分享至朋友圈。
+				<img src="http://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data={$article.Url}" alt="{$article.Title}">
 			</p>
 		</div>
 		</span>
@@ -80,17 +67,7 @@
 		{/if}
 	<span class="text-muted"> - 
 	<span>
-	<a id="weixin-{$article.ID}" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown text-muted hidden-xs">微信分享 <span class="caret"></span></a>
-	<div class="dropdown-menu weixin-box" aria-labelledby="weixin-{$article.ID}">
-		<p>
-			<img src="http://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data={$article.Url}" alt="{$article.Title}">
-		</p>
-		<p>
-			打开微信，点击底部的“发现”，<br/>使用“扫一扫”即可将网页分享至朋友圈。
-		</p>
-	</div>
-	</span>
-	   - {$article.ViewNums}人次浏览
+		 {foreach $article.Tags as $tag}<a href="{$tag.Url}" class="text-success">{$tag.Name}</a> {/foreach} - {$article.ViewNums}人次浏览
 	</span>
 </section>
 {/if}
