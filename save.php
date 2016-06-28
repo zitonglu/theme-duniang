@@ -49,5 +49,19 @@ if($_GET['type'] == 'Homejpg' ){
 	$zbp->SetHint('good','修改成功');
 	Redirect('./main.php?act=Homejpg');
 }
+if($_GET['type'] == 'shangjpg' ){
+	global $zbp;
+	foreach ($_FILES as $key => $value) {
+		if(!strpos($key, "_php")){
+			if (is_uploaded_file($_FILES[$key]['tmp_name'])) {
+				$tmp_name = $_FILES[$key]['tmp_name'];
+				$name = $_FILES[$key]['name'];
+				@move_uploaded_file($_FILES[$key]['tmp_name'], $zbp->usersdir . 'theme/duniang/include/shang.jpg');
+			}
+		}
+	}
+	$zbp->SetHint('good','修改成功');
+	Redirect('./main.php?act=shangjpg');
+}
 
 ?>
