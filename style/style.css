@@ -67,3 +67,4 @@ section.list-section>h4,.more-list-p{overflow:hidden;text-overflow:ellipsis;whit
 .carousel-control {width: 40px;height: 80px;top: 50%;margin-top: -40px;}
 .nav-style{border-bottom:2px solid rgb(79, 159, 207);}
 .carousel-control.right,.carousel-control.left{background-image:none;}
+article,aside,footer,header,hgroup,nav,section{display:none;}
