@@ -261,12 +261,11 @@ section.list-section>h4,
 .hot-single{
 	overflow: hidden;
 }
-.hot-single a{
-	color:#fff;
-}
 .hot-single:hover,
 .hot-single img:hover,
-.hot-single a:hover{
+.hot-single:hover img,
+.hot-single a:hover,
+.hot-single:hover a{
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
 	-ms-transition: all .5s;
@@ -275,9 +274,11 @@ section.list-section>h4,
 }
 .hot-single:hover{
 	background-color: #428bca;
-	color: #fff !important;
 }
-.hot-single img:hover{
+.hot-single:hover a{
+	color:#fff;
+}
+.hot-single:hover img{
 	transform: scale(1.1, 1.1);
 	-webkit-transform: scale(1.1, 1.1);
 	-moz-transform: scale(1.1, 1.1);
