@@ -25,11 +25,11 @@
 <div class="blog-text">{$article.Content}
   <div class="text-center" style="margin-top:20px;margin-bottom:20px">
     <div class="btn-group" role="group">
-      {if $article.Prev}<a href="{$article.Prev.Url}" class="btn btn-default" title="{$article.Prev.Title}"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;上一篇</a>{/if}
+      {if $article.Prev}<a href="{$article.Prev.Url}" class="btn btn-default hidden-xs" title="{$article.Prev.Title}"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;上一篇</a>{/if}
       <a href="#" data-toggle="modal" data-target="#shang" type="button" class="btn btn-default" title="打赏" alt="打赏"><i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;打赏</a>
       <a href="#" data-toggle="modal" data-target="#myerweima" type="button" class="btn btn-default" title="微信分享" alt="微信分享"><i class="glyphicon glyphicon-qrcode"></i>&nbsp;二维码</a>
       <a href="#" data-toggle="modal" data-target="#shareOut" type="button" class="btn btn-default" title="文章分享" alt="文章分享"><i class="glyphicon glyphicon-share"></i>&nbsp;分享</a>
-      {if $article.Next}<a href="{$article.Next.Url}" class="btn btn-default" title="{$article.Next.Title}"><i class="glyphicon glyphicon-chevron-right"></i>&nbsp;下一篇</a>{/if}
+      {if $article.Next}<a href="{$article.Next.Url}" class="btn btn-default hidden-xs" title="{$article.Next.Title}"><i class="glyphicon glyphicon-chevron-right"></i>&nbsp;下一篇</a>{/if}
     </div>
   </div>
   <!-- 分享按钮 -->
