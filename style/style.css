@@ -1,5 +1,9 @@
-article,aside,footer,header,hgroup,nav,section{
-	display: none;
+::-webkit-selection,
+::-moz-selection,
+::-ms-selection,
+::-o-selection,
+::selection{
+	background-color:#428bca;
 }
 .body-padding {
 	padding-top: 50px
@@ -42,12 +46,11 @@ section.list-section>h4,
 }
 #divPrevious a:visited,
 .list-section>h4>a:visited,
-.more-text a:visited,
-.pl-list a:visited {
+.more-text a:visited{
 	color: #563d7c
 }
 .pl-list {
-	margin-bottom: 3px
+	margin-bottom:-9px
 }
 .weixin-box {
 	padding: 6px
@@ -254,6 +257,32 @@ section.list-section>h4,
 }
 .dian {
 	color: #563d7c
+}
+.hot-single{
+	overflow: hidden;
+}
+.hot-single a{
+	color:#fff;
+}
+.hot-single:hover,
+.hot-single img:hover,
+.hot-single a:hover{
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+.hot-single:hover{
+	background-color: #428bca;
+	color: #fff !important;
+}
+.hot-single img:hover{
+	transform: scale(1.1, 1.1);
+	-webkit-transform: scale(1.1, 1.1);
+	-moz-transform: scale(1.1, 1.1);
+	-o-transform: scale(1.1, 1.1);
+	-ms-transform: scale(1.1, 1.1);
 }
 /*单页面*/
 .comment-list {

@@ -125,13 +125,13 @@
   {php}SF_img1::getPics($hotlist,240,180,4);{/php}
   {php}$src=SF_img1::getPicUrlBy($hotlist->Metas->duniang_teSeTuPian,240,180,4){/php}
   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
+    <div class="thumbnail hot-single">
       {if $hotlist.Metas.duniang_teSeTuPian!=""}
-      <img src="{$src}" alt="{$hotlist.Title}">
+      <a href="{$hotlist.Url}" title="{$hotlist.Title}"><img src="{$src}" alt="{$hotlist.Title}"></a>
       {elseif $hotlist->sf_img_count>0}
-      <img src="{$hotlist.sf_img[0]}" alt="{$hotlist.Title}">
+      <a href="{$hotlist.Url}" title="{$hotlist.Title}"><img src="{$hotlist.sf_img[0]}" alt="{$hotlist.Title}"></a>
       {else}
-      <img src="{$host}zb_users/theme/{$theme}/include/nopic.jpg" alt="{$hotlist.Title}">
+      <a href="{$hotlist.Url}" title="{$hotlist.Title}"><img src="{$host}zb_users/theme/{$theme}/include/nopic.jpg" alt="{$hotlist.Title}"></a>
       {/if}
       <div class="caption">
         <p class="pl-list more-list-p">
