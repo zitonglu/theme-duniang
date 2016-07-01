@@ -261,7 +261,9 @@ section.list-section>h4,
 .hot-single{
 	overflow: hidden;
 }
+.hot-single,
 .hot-single:hover,
+.hot-single img,
 .hot-single img:hover,
 .hot-single:hover img,
 .hot-single a:hover,
