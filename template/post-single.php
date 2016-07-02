@@ -28,7 +28,25 @@
       {if $article.Prev}<a href="{$article.Prev.Url}" class="btn btn-default hidden-xs" title="{$article.Prev.Title}"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;上一篇</a>{/if}
       <a href="#" data-toggle="modal" data-target="#shang" type="button" class="btn btn-default" title="打赏" alt="打赏"><i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;打赏</a>
       <a href="#" data-toggle="modal" data-target="#myerweima" type="button" class="btn btn-default" title="微信分享" alt="微信分享"><i class="glyphicon glyphicon-qrcode"></i>&nbsp;二维码</a>
-      <a href="#" data-toggle="modal" data-target="#shareOut" type="button" class="btn btn-default" title="文章分享" alt="文章分享"><i class="glyphicon glyphicon-share"></i>&nbsp;分享</a>
+      <div class="btn-group dropup" role="group">
+        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-share"></i>&nbsp;分享&nbsp;<i class="caret"></i></a>
+        <div class="bdsharebuttonbox dropdown-menu shareN" data-tag="share_1">
+          <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+          <a class="bds_tsina" data-cmd="tsina"></a>
+          <a class="bds_baidu" data-cmd="baidu"></a>
+          <a class="bds_renren" data-cmd="renren"></a>
+          <a class="bds_tqq" data-cmd="tqq"></a>
+          <a class="bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+          window._bd_share_config = {
+            share : [{
+              "bdSize" : 24
+            }]
+          }
+          with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+      </div>
       {if $article.Next}<a href="{$article.Next.Url}" class="btn btn-default hidden-xs" title="{$article.Next.Title}"><i class="glyphicon glyphicon-chevron-right"></i>&nbsp;下一篇</a>{/if}
     </div>
   </div>
@@ -75,24 +93,6 @@
   </div>
 </div>
 <!-- myerweima end -->
-<div class="modal fade" id="shareOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <p class="modal-title" id="myModalLabel">文章分享</p>
-      </div>
-      <div class="modal-body text-center">
-        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- shareOut end -->
-
 </div>
 {if $zbp->Config('duniang')->PageAD1!=""}
   <div class="hidden-sm hidden-xs center-block">
