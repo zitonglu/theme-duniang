@@ -27,7 +27,6 @@
     <div class="btn-group" role="group">
       {if $article.Prev}<a href="{$article.Prev.Url}" class="btn btn-default hidden-xs" title="{$article.Prev.Title}"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;上一篇</a>{/if}
       <a href="#" data-toggle="modal" data-target="#shang" type="button" class="btn btn-default" title="打赏" alt="打赏"><i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;打赏</a>
-      <a href="#" data-toggle="modal" data-target="#myerweima" type="button" class="btn btn-default" title="微信分享" alt="微信分享"><i class="glyphicon glyphicon-qrcode"></i>&nbsp;二维码</a>
       <div class="btn-group dropup" role="group">
         <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-share"></i>&nbsp;分享&nbsp;<i class="caret"></i></a>
         <div class="bdsharebuttonbox dropdown-menu shareN" data-tag="share_1">
@@ -46,6 +45,7 @@
           }
           with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
         </script>
+        <a href="#" data-toggle="modal" data-target="#myerweima" type="button" class="btn btn-default" title="微信分享" alt="微信分享"><i class="glyphicon glyphicon-qrcode"></i>&nbsp;二维码</a>
       </div>
       {if $article.Next}<a href="{$article.Next.Url}" class="btn btn-default hidden-xs" title="{$article.Next.Title}"><i class="glyphicon glyphicon-chevron-right"></i>&nbsp;下一篇</a>{/if}
     </div>
