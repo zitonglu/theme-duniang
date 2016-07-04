@@ -12,7 +12,7 @@
   <script src="{$host}zb_system/script/c_html_js_add.php" type="text/javascript"></script>
   <!--bootrap外调库-->
   <link rel="stylesheet" id="_bootstrap-css"  href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css" media="all" />
- 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/{$style}.css?v=1.1" type="text/css">
+ 	<link rel="stylesheet" href="{$host}zb_users/theme/{$theme}/style/{$style}.css?v=1.3" type="text/css">
 	<meta name="generator" content="{$zblogphp}" />
 {$header}
   <!--首页相关信息-->
@@ -54,7 +54,7 @@
   <meta name="description" content="{if $zbp->Config('duniang')->Homedescription==""}{$subname}{else}{$zbp->Config('duniang')->Homedescription}{/if}">
   <meta name="author" content="{$zbp.members[1].Name}">
 {else}
-  <title>{$title}_第{$pagebar.PageNow}页</title>
+  <title>{$title}</title>
   <meta name="Keywords" content="{$title},{$name}">
   <meta name="description" content="{$title}_{$name}_当前是第{$pagebar.PageNow}页">
   <meta name="author" content="{$zbp.members[1].Name}">
