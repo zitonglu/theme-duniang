@@ -19,7 +19,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<form class="navbar-form navbar-left" role="search" action="{$host}zb_system/cmd.php?act=search" name="search" method="post">
-					<div class="form-group">
+					<div class="form-group col-xs-9">
 						<input type="text" class="form-control" placeholder="搜点什么" name="q">
 					</div>
 					<button type="submit" class="btn btn-default">搜索</button>
