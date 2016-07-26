@@ -382,20 +382,10 @@ section.list-section>h4,
 	width: auto;
 }
 .PicList li img:hover {
-	-webkit-animation: PicListMove .2s ease 2 alternate;
-	-moz-animation: PicListMove .2s ease 2 alternate;
-	-o-animation: PicListMove .2s ease 2 alternate;
-	-ms-animation: PicListMove .2s ease 2 alternate;
-	animation: PicListMove .2s ease 2 alternate;
-}
-@keyframes PicListMove {
-	100% {
-		transform: scale(1.1, 1.1);
-		-webkit-transform: scale(1.1, 1.1);
-		-moz-transform: scale(1.1, 1.1);
-		-o-transform: scale(1.1, 1.1);
-		-ms-transform: scale(1.1, 1.1);
-	}
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
 }
 /*分享按钮*/
 .shareN{
