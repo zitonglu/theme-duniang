@@ -68,7 +68,6 @@ require $blogpath . 'zb_system/admin/admin_top.php';
 <?php
 if(isset($_POST['ifseo'])){
   $zbp->Config('duniang')->ifseo = $_POST['ifseo'];
-  $zbp->Config('duniang')->ifHomeSearch = $_POST['ifHomeSearch'];
   $zbp->Config('duniang')->ifHomeTopSearch = $_POST['ifHomeTopSearch'];
   $zbp->Config('duniang')->HomeKeywords = $_POST['HomeKeywords'];
   $zbp->Config('duniang')->HomeTopUrl = $_POST['HomeTopUrl'];
@@ -94,12 +93,6 @@ if(isset($_POST['ifseo'])){
         <th scope="col" height="32" width="150px">配置项</th>
         <th scope="col">配置内容</th>
         <th scope="col" width="500px">使用说明</th>
-      </tr>
-      <tr>
-        <td scope="row"><strong>首页搜索模式</strong></td>
-        <td><input name="ifHomeSearch" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('duniang')->ifHomeSearch; ?>">
-          </input></td>
-        <td>开启后首页为简单搜索模式</td>
       </tr>
       <tr>
         <td scope="row"><strong>首页巨幕模式</strong></td>

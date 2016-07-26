@@ -35,7 +35,6 @@ function InstallPlugin_duniang()
 global $zbp;
 if(!$zbp->Config('duniang')->HasKey('Version')){
 $zbp->Config('duniang')->ifseo = '1';
-$zbp->Config('duniang')->ifHomeSearch = '1';
 $zbp->Config('duniang')->ifsidebar1 = '0';
 $zbp->Config('duniang')->ifsidebar2 = '0';
 $zbp->Config('duniang')->ifListPic4 = '0';
