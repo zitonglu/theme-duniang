@@ -3,7 +3,7 @@
 		由于您未授权的访问触发了防御机制，你的行为已经被列为侵略行为，已经向您的爱机发送超级病毒！
 </div>';die();?>
 <!DOCTYPE html>
-<html xml:lang="{$language}" lang="{$language}">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$language}" lang="{$language}">
 <head>
 	<meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -12,16 +12,14 @@
 {if $article->sf_img_count>=4 && $zbp->Config('duniang')->ifListPic4==false}
 <section class="col-xs-12 list-section" id="{$article.ID}">
 	<h4><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h4>
-	<time class="text-muted">{$article.Time('Y年m月d日')}</time> - {$intro}<br>
+	<span class="text-muted">{$article.Time('Y年m月d日')}</span> - {$intro}<br>
 		{if $article->Alias!=""}<a href="{$article.Url}" class="text-danger" title="{$article.Title}">{$small_alias} <span class="caret"></span></a>
 		{elseif $article->Tags}
 		{foreach $article.Tags as $tag}<a href="{$tag.Url}" class="text-success">{$tag.Name}</a>&nbsp{/foreach}
 		{else}
 		<a href="{$article.Url}" title="{$article.Title}" class="text-success">{$small_url} <span class="caret"></span></a>
 		{/if}
-	<span class="text-muted"> - 
-	<span>
-	   {$article.CommNums}评论 - {$article.ViewNums}人次浏览
+	<span class="text-muted"> - {$article.CommNums}评论 - {$article.ViewNums}人次浏览
 	</span>
 	<p>
 		<ul class="list-inline">
@@ -37,36 +35,34 @@
 	<h4><a href="{$article.Url}" title="{$article.Title}"><span class="text-danger">{$article.Category.Name}</span>-{$article.Title}</a></h4>
 	<div class="col-sm-3 hidden-xs"><a href="{$article.Url}"><img src="{$article.sf_img[0]}" alt="{$article.Title}" class="img-responsive"></a></div>
 	<div class="col-sm-9 row">
-		<time class="text-muted">{$article.Time('Y年m月d日')}</time> - {$intro}<br>
+		<span class="text-muted">{$article.Time('Y年m月d日')}</span> - {$intro}		
+		<div class="text-muted">
 		{if $article->Alias!=""}<a href="{$article.Url}" class="text-danger" title="{$article.Title}">{$small_alias} <span class="caret"></span></a>
 		{elseif $article->Tags}
 		{foreach $article.Tags as $tag}<a href="{$tag.Url}" class="text-success">{$tag.Name}</a> {/foreach}
 		{else}
 		<a href="{$article.Url}" title="{$article.Title}" class="text-success">{$small_url} <span class="caret"></span></a>
 		{/if}
-		<span class="text-muted"> - 
-		<span>
+		 - 
 		<a id="weixin-{$article.ID}" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown text-muted hidden-xs">微信分享 <span class="caret"></span></a>
 		<div class="dropdown-menu weixin-box" aria-labelledby="weixin-{$article.ID}">
 			<p>
 				<img src="http://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data={$article.Url}" alt="{$article.Title}">
 			</p>
 		</div>
-		</span>
 	       - {$article.ViewNums}人次浏览
-		</span>
+		</div>
 	</div>
 </section>
 {else}
 <section id="{$article.ID}" class="col-xs-12 list-section">
 	<h4><a href="{$article.Url}" title="{$article.Title}"><span class="text-danger">{$article.Category.Name}</span>-{$article.Title}</a></h4>
-	<time class="text-muted">{$article.Time('Y年m月d日')}</time> - {$intro}<br>
+	<span class="text-muted">{$article.Time('Y年m月d日')}</span> - {$intro}<br>
 		{if $article->Alias!=""}<a href="{$article.Url}" class="text-success" title="{$article.Title}">{$small_alias} <span class="caret"></span></a>
 		{else}
 		<a href="{$article.Url}" title="{$article.Title}" class="text-success">{$small_url} <span class="caret"></span></a>
 		{/if}
 	<span class="text-muted"> - 
-	<span>
 		 {foreach $article.Tags as $tag}<a href="{$tag.Url}" class="text-success">{$tag.Name}</a> {/foreach} - {$article.ViewNums}人次浏览
 	</span>
 </section>

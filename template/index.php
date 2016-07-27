@@ -44,7 +44,7 @@
 						<ul class="dropdown-menu">
 							{module:catalog}
 							<li role="separator" class="divider"></li>
-							<li><a href="{$feedurl}" target="_black" title="{$title}的RSS订阅">RSS订阅</a></li>
+							<li><a href="{$feedurl}" target="_blank" title="{$title}的RSS订阅">RSS订阅</a></li>
 						</ul>
 					</div>
 					<input type="text" class="form-control" placeholder="{$name}..." name="q">
@@ -141,9 +141,11 @@
 			</section>
 			{/if}<!-- PC广告 -->
 			{if $modules['link'].Content}
-			<div class="list-inline col-xs-12">
+			<div class="col-xs-12">
 				<h4>友情链接</h4>
-				{module:link}
+				<ul class="list-inline">
+					{module:link}
+				</ul>
 			</div>
 			{/if}
 			{template:pagebar}

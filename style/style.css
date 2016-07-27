@@ -89,6 +89,12 @@ section.list-section>h4,
 	padding-left: 5px;
 	border-left: 5px solid rgb(79, 129, 189)
 }
+.widget>ul{
+	margin-left: -35px;
+}
+#divPrevious>ul{
+	margin-left: 0;
+}
 /*zblogPHP自带表情style*/
 #divFavorites,
 #divLinkage {

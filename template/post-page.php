@@ -12,7 +12,7 @@
   <div class="title-text">
     <h1 class="text-center">{$article.Title}</h1>
     <p class="text-muted text-center">
-      <time>{$article.Time('Y年m月d日 H:i')}</time> 
+      {$article.Time('Y年m月d日 H:i')}&nbsp; 
       {if $article.Tags}
       标签：{foreach $article.Tags as $tag}<a href="{$tag.Url}">{$tag.Name}</a>{/foreach}
       {else}{$article.Author.StaticName}
