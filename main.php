@@ -7,11 +7,8 @@ $action='root';
 if (!$zbp->CheckRights($action)) {$zbp->ShowError(6);die();}
 if (!$zbp->CheckPlugin('duniang')) {$zbp->ShowError(48);die();}
 $blogtitle="主题配置";
-$act = "";
-if ($_GET['act']){
-$act = $_GET['act'] == "" ? 'base' : $_GET['act'];
-}
-
+$act=GetVars('act','GET');
+if($act == "" ) $act= 'config' ;
 require $blogpath . 'zb_system/admin/admin_header.php';
 require $blogpath . 'zb_system/admin/admin_top.php';
 ?>
@@ -20,7 +17,7 @@ require $blogpath . 'zb_system/admin/admin_top.php';
   <div class="divHeader2"><?php echo $blogtitle;?></div>
   <div class="SubMenu">
     <?php duniang_SubMenu($act);?>
-    <a href="http://www.paipk.com/" target="_blank"><span class="m-left">设置帮助(wiki)</span></a>
+    <a href="http://www.paipk.com/wiki/duniang.html" target="_blank" title="度娘的wiki"><span class="m-left">设置帮助(wiki)</span></a>
   </div>
   <div id="divMain2">
 <?php if ($act == 'base' || $act == 'bjjpg' || $act == 'Homejpg' || $act == 'shangjpg'){?><!--图片设置-->
