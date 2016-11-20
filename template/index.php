@@ -6,7 +6,6 @@
 </head>
 <body class="body-padding">
 <nav class="navbar navbar-default navbar-fixed-top nav-style">
-	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 			<span class="sr-only">{$name}</span>
@@ -15,7 +14,7 @@
 			<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="{$host}" title="{$name}"><img alt="{$name}的LOGO" src="{$host}zb_users/theme/{$theme}/include/logo.png"></a>
-			<a class="navbar-brand" href="{$host}" title="{$subname}">{$name}</a>
+			<!-- <a class="navbar-brand" href="{$host}" title="{$subname}">{$name}</a> -->
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<form class="navbar-form navbar-left" role="search" action="{$host}zb_system/cmd.php?act=search" name="search" method="post">
@@ -27,12 +26,8 @@
 			<ul class="nav navbar-nav">
 				{module:navbar}
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				{module:右上导航}
-			</ul>
 		</div>
-	</div>
-</nav><!-- 顶部导航 End -->
+</nav><!-- nav End -->
 	{if $zbp->Config('duniang')->ifHomeTopSearch=="1"}
 	<div class="jumbotron hidden-xs JuMu">
 		<div class="text-center"><a href="{if $zbp->Config('duniang')->HomeTopUrl}{$zbp->Config('duniang')->HomeTopUrl}{else}{$host}{/if}"><img src="{$host}zb_users/theme/{$theme}/include/homelogo.png" alt="{$name}"></a></div>

@@ -1,5 +1,4 @@
 <?php
-require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugin/search_config.php';
 //注册插件
 RegisterPlugin('duniang','ActivePlugin_duniang');
 
@@ -8,7 +7,6 @@ function ActivePlugin_duniang()
 	Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'duniang_AddMenu');
 	Add_Filter_Plugin('Filter_Plugin_Zbp_Load','duniang_rebuild_Main');
 	Add_Filter_Plugin('Filter_Plugin_Edit_Response3','duniang_teSeTuPian');
-	Add_Filter_Plugin('Filter_Plugin_Search_Begin','duniang_SearchMain');
 }
 
 //定义开头
@@ -34,10 +32,7 @@ function InstallPlugin_duniang()
 {
 global $zbp;
 if(!$zbp->Config('duniang')->HasKey('Version')){
-$zbp->Config('duniang')->ifseo = '1';
-$zbp->Config('duniang')->ifsidebar1 = '0';
-$zbp->Config('duniang')->ifsidebar2 = '0';
-$zbp->Config('duniang')->ifListPic4 = '0';
+$zbp->Config('duniang')->ifHomeTopSearch = '1';
 $zbp->Config('duniang')->HomeKeywords = '拍拍看科技';
 }
 $zbp->Config('duniang')->Version = '1.0';
