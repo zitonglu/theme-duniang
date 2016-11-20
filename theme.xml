@@ -18,11 +18,11 @@
   <email>paipk@paipk.com</email>
   <url>http://www.paipk.com/</url>
 </source>
-<adapted>140614</adapted>
-<version>1.5</version>
+<adapted>151626</adapted>
+<version>2</version>
 <pubdate>2016-02-24</pubdate>
-<modified>2016-03-06</modified>
-<price>32</price>
+<modified>2016-11-20</modified>
+<price>48</price>
 <advanced>
   <dependency>sf_img1</dependency>
   <rewritefunctions></rewritefunctions>

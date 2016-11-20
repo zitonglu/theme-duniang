@@ -70,8 +70,6 @@ if(isset($_POST['ifseo'])){
   $zbp->Config('duniang')->HomeTopUrl = $_POST['HomeTopUrl'];
   $zbp->Config('duniang')->Homedescription = $_POST['Homedescription'];
   $zbp->Config('duniang')->baidutongji = $_POST['baidutongji'];
-  $zbp->Config('duniang')->ifsidebar1 = $_POST['ifsidebar1'];
-  $zbp->Config('duniang')->ifsidebar2 = $_POST['ifsidebar2'];
   $zbp->Config('duniang')->ifListPic4 = $_POST['ifListPic4'];
   $zbp->Config('duniang')->ifcarousel = $_POST['ifcarousel'];
   $zbp->Config('duniang')->carousel0 = $_POST['carousel0'];
@@ -130,18 +128,6 @@ if(isset($_POST['ifseo'])){
         <td scope="row">百度统计</td>
         <td><textarea name="baidutongji" type="text" style="width:98%" ><?php echo $zbp->Config('duniang')->baidutongji; ?></textarea></td>
         <td>代码添加至网站全部页面的head标签前</td>
-      </tr>
-      <tr>
-        <td scope="row"><strong>主页侧栏跟随</strong></td>
-        <td><input name="ifsidebar1" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('duniang')->ifsidebar1; ?>">
-          </input></td>
-        <td>开启主页侧栏自动跟随</td>
-      </tr>
-      <tr>
-        <td scope="row"><strong>内容页侧栏跟随</strong></td>
-        <td><input name="ifsidebar2" type="text" class="checkbox" style="display:none;" value="<?php echo $zbp->Config('duniang')->ifsidebar2; ?>">
-          </input></td>
-        <td>开启内容页页侧栏自动跟随</td>
       </tr>
       <tr>
         <td scope="row"><strong>首页幻灯片开关</strong></td>

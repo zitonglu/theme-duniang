@@ -42,11 +42,11 @@
 	{template:post-page}
 	{/if}
     </div>
-    <div class="col-sm-4">
-		<aside class="nav hidden-xs list-right"{if $zbp->Config('duniang')->ifsidebar2=="1"} data-spy="affix" id="nav"{/if}>
+    <aside class="col-sm-4 sidebar">
+		<div class="nav hidden-xs list-right theiaStickySidebar">
 		{template:sidebar2}
-		</aside>
-	</div>
+		</div>
+	</aside>
 </div>
 {template:footer}
 

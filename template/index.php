@@ -147,11 +147,11 @@
 			{template:pagebar}
 		</div>
 		<!-- 左侧栏 End -->
-		<div class="col-sm-5">
-			<aside class="nav hidden-xs list-right"{if $zbp->Config('duniang')->ifsidebar1=="1"} data-spy="affix" id="nav"{/if}><!-- 是否下滚判断 -->
+		<aside class="col-sm-5 sidebar">
+			<div class="nav hidden-xs list-right theiaStickySidebar"><!-- 侧栏滚动 -->
 			{template:sidebar}
-		</aside>
-		</div><!-- 右侧栏 End -->
+			</div>
+		</aside><!-- 右侧栏 End -->
 		<div class="clearfix"></div>
 	</div>
 {template:footer}

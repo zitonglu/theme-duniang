@@ -10,17 +10,12 @@
 </footer>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script>
-    $('#nav').affix({
-        offset: {
-                top:100,
-                bottom: function () {
-                return (this.bottom = $('.footer').outerHeight(true))
-    }
-        }
-    });
-    //@ sourceURL=pen.js
-    </script>
+<script src="{$host}zb_users/theme/{$theme}/js/theia-sticky-sidebar.js"></script>
+<script>
+jQuery(document).ready(function() {
+    jQuery('.sidebar').theiaStickySidebar({ additionalMarginTop:60}); 
+});
+</script>
     {$footer}
     </body>
 </html>
